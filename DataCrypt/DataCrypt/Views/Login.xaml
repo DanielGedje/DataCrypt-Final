@@ -1,0 +1,34 @@
+﻿<Window x:Class="DataCrypt.Views.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DataCrypt.Views"
+        mc:Ignorable="d"
+          Title="Login" Height="700" Width="1200" ResizeMode="CanMinimize">
+    <Grid x:Name="grid" HorizontalAlignment="Right" Width="1194" Height="671" VerticalAlignment="Bottom">
+        <Grid.Background>
+            <ImageBrush ImageSource="/Resources/Images/background.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Image x:Name="logo" Margin="0,0,1075,501" Source="/Resources/Images/logo.png" Width="100" HorizontalAlignment="Right" Height="100" VerticalAlignment="Bottom"/>
+        <Label Content="DataCrypt" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="50" Foreground="#1C68C1" FontWeight="Bold" Margin="97,0,0,528"/>
+        <Label Content="Login" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="35" Foreground="#FFFFFF" FontWeight="Bold" Margin="78,0,0,408"/>
+        <TextBox CaretBrush="White" Padding="5" MaxLength="30" x:Name="fullName" Style="{StaticResource MyWaterMarkStyle}" Margin="160,0,644,317" Tag="Full Name" TextWrapping="Wrap" VerticalAlignment="Bottom" Height="48" HorizontalAlignment="Center" Width="390" VerticalContentAlignment="Center" Foreground="White" FontSize="15"/>
+        <TextBox CaretBrush="White" Padding="5" MaxLength="30" x:Name="password" Style="{StaticResource MyWaterMarkStyle}" Margin="160,0,644,244" Tag="Password" TextWrapping="Wrap" VerticalAlignment="Bottom" Height="48" HorizontalAlignment="Center" Width="390" VerticalContentAlignment="Center" Foreground="White" FontSize="15"/>
+        <Button Style="{StaticResource regButton}" Content="Next" HorizontalAlignment="Left" Height="40" Width="300" BorderThickness="0,0,0,0" Foreground="White" FontSize="25" Margin="200,0,0,178" VerticalAlignment="Bottom" Click="Login_Button"/>
+
+        <StackPanel Orientation="Horizontal" Margin="226,0,726,118" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+            <Label Content="Don't have an account?" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="17" Padding="0,0,5,0"/>
+            <Button Style="{StaticResource Links}" Cursor="Hand"  HorizontalAlignment="Center" VerticalAlignment="Center" Background="#00DDDDDD" BorderThickness="0,0,0,0" FontSize="17" Click="onClick_SignUp">
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <TextBlock.TextDecorations>
+                        <TextDecoration PenOffset="5" PenOffsetUnit="Pixel"></TextDecoration>
+                    </TextBlock.TextDecorations>
+                    Sign Up
+                </TextBlock>
+            </Button>
+        </StackPanel>
+
+        <Image x:Name="homePicture" Margin="664,0,0,79" Source="/Resources/Images/login.png" Width="466" HorizontalAlignment="Left" Height="438" VerticalAlignment="Bottom" RenderTransformOrigin="0.632,0.487"/>
+    </Grid>
+</Window>
